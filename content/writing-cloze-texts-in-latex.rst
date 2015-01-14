@@ -1,14 +1,12 @@
-writing cloze texts in latex 
+writing cloze texts in latex
 =============================
 
 :date: 2008-03-18
 
+..code:: latex
 
-<pre syntax="latex">
-\newif\ifstudents \newcommand{\cloze}[1]{\ifstudents\underline{\hphantom{#1}}\else #1\fi}
-</pre>
+    \newif\ifstudents \newcommand{\cloze}[1]{\ifstudents\underline{\hphantom{#1}}\else #1\fi}
 
-<pre syntax="bash" tabsize="4">
+::
 	a
     b
-</pre>

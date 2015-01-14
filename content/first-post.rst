@@ -7,46 +7,44 @@ First post
 
 After some problems i got the first blog instance running.
 
-It needed some python trickery:
-<pre syntax="python">
-#!/usr/bin/python
-"""
-    TextPress FastCGI Runner
-    ~~~~~~~~~~~~~~~~~~~~~~~~
-"""
-import sys
-from os.path import join
+It needed some python trickery::
+    #!/usr/bin/python
+    """
+        TextPress FastCGI Runner
+        ~~~~~~~~~~~~~~~~~~~~~~~~
+    """
+    import sys
+    from os.path import join
 
-paths = """
-sqlalchemy/lib
-jinja
-pygments
-textpress
-werkzeug
-"""[1:-1].split()
+    paths = """
+    sqlalchemy/lib
+    jinja
+    pygments
+    textpress
+    werkzeug
+    """[1:-1].split()
 
-BASE = '/home/ronny/Projects/web'
+    BASE = '/home/ronny/Projects/web'
 
-for p in paths:
-    sys.path.insert(0, join(BASE, p))
+    for p in paths:
+        sys.path.insert(0, join(BASE, p))
 
-from textpress import make_app
-from flup.server.fcgi import WSGIServer
+    from textpress import make_app
+    from flup.server.fcgi import WSGIServer
 
-INSTANCE_FOLDER = join(BASE, 'textpress/instance')
+    INSTANCE_FOLDER = join(BASE, 'textpress/instance')
 
-app = make_app(INSTANCE_FOLDER)
+    app = make_app(INSTANCE_FOLDER)
 
-srv = WSGIServer(app,
-        bindAddress='/tmp/blog.sock',
-        environ={'SCRIPT_NAME':''},
-        umask=000,
-        )
+    srv = WSGIServer(app,
+            bindAddress='/tmp/blog.sock',
+            environ={'SCRIPT_NAME':''},
+            umask=000,
+            )
 
-if __name__ == '__main__':
-    srv.run()
-</pre>
+    if __name__ == '__main__':
+        srv.run()
 
 There are still some problems with the MetaBlog api and FileUpload, but i expect to solve them soon :)
 
-<b>Update:</b> the problems are solved
+*Update:* the problems are solved

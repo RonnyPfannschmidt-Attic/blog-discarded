@@ -7,70 +7,67 @@ finding dynamic name-errors in python with rope
 
 Im really unhappy with pylint/pyflakes cause their analysis is entirely static.
 
-But thanks to <a href="http://rope.sourceforge.net/">rope</a> by Ali Gholami Rudi thats no longer a Problem.
+But thanks to <a href="http://rope.sourceforge.net/">rope_</a> by Ali Gholami Rudi thats no longer a Problem.
 
-A simple test to show the power of rope for finding missing names in the context of star-import 
+A simple test to show the power of rope for finding missing names in the context of star-import
 and access to non-existing attributes.
 
 my test files are
-<dl>
-<dt>test.py</dt>
-<dd><sourcecode syntax="python">
-def test1():
-    return a #error 1
 
-b = 1 
+:test.py:
+    ..code:: python
 
-def test2():
-    return b
+        def test1():
+            return a #error 1
 
-def test3():
-    c = 1
-    return b, a #error 2
+        b = 1
 
-def test4():
-    c = 1
-    return b, c
-</sourcecode></dd>
+        def test2():
+            return b
 
-<dt>test2.py</dt>
-<dd><sourcecode syntax="python">
-from test import *
+        def test3():
+            c = 1
+            return b, a #error 2
+
+        def test4():
+            c = 1
+            return b, c
+:test2.py:
+    ..code:: python
 
 
-b
-abc #error a
+        from test import *
 
 
-class Test:
-    def __init__(self):
-        self.x = 123
+        b
+        abc #error a
 
 
-t = Test()
-t.x
-t.abc #error b
-</sourcecode>
-</dd>
-</dl>
+        class Test:
+            def __init__(self):
+                self.x = 123
+
+
+        t = Test()
+        t.x
+        t.abc #error b
 
 While pyflakes/pylint are only able to find the numbered errors a simple rope script is able to find all of them all.
 Its mostly based on a simple example ali gave to me.
 
-<sourcecode syntax="python">
-#!/usr/bin/python
-import glob
-from rope.base.project import Project
-from rope.contrib.finderrors import find_errors
+..code:: python
+    #!/usr/bin/python
+    import glob
+    from rope.base.project import Project
+    from rope.contrib.finderrors import find_errors
 
-def scan_test():
-    project = Project('/home/ronny/Projects/web/textpress')
-    for f in project.get_files():
-        if f.name.endswith('py'):
-            for error in find_errors(project, f):
-                print f.path, error
+    def scan_test():
+        project = Project('/home/ronny/Projects/web/textpress')
+        for f in project.get_files():
+            if f.name.endswith('py'):
+                for error in find_errors(project, f):
+                    print f.path, error
 
-scan_test()
+    scan_test()
 
-</sourcecode>
 
