@@ -1,8 +1,10 @@
+=============================
 wrapping pro/toolkit strings
-============================
+=============================
 
-:date: 2008-03-03
-:tags: pro_toolkit, c++
+
+:date: 2008-03-03 00:00
+:tags: pro_toolkit, c++, old
 
 
 As part of my internship i have to work with Pro/Toolkit.

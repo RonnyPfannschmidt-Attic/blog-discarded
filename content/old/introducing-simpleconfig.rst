@@ -1,7 +1,8 @@
+========================
 introducing simpleconfig
 ========================
 
-:Date: 2008-04-22 00:00
+:date: 2008-04-22 00:00
 :tags: python, pida, cruft
 
 

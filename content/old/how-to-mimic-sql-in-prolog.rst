@@ -1,7 +1,9 @@
+==============================
 how to mimic sql dql in prolog
 ==============================
 
-:date: 2009-01-07 21:21
+:date: 2009-01-07
+:tags: old
 
 
 i just made up a prolog dsl for entering pseudo-sql queries.
