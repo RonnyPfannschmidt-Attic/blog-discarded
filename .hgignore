@@ -2,3 +2,5 @@
 output/
 cache/
 .*\.db
+disqus_static.py
+plantuml_rst.py
