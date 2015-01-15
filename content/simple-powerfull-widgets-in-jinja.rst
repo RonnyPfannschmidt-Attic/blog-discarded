@@ -10,61 +10,57 @@ since they don't support keyword parameters.
 
 So i created a small widget system wich supports those.
 
-The basic primitive is:
-<sourcecode syntax="python">
-class Widget(object):
-    jinja_context_callable = True
+The basic primitive is::
 
-    TEMPLATE = None
+  class Widget(object):
+      jinja_context_callable = True
 
-    def __call__(self, env, context, **kwargs):
-        if not self.TEMPLATE:
-            self.TEMPLATE = self.__class__.__name__.lower()
-        template = env.get_template('widgets/%s.jinja'%self.TEMPLATE)
-        return template.render(kwargs)
+      TEMPLATE = None
 
-</sourcecode>
+      def __call__(self, env, context, **kwargs):
+          if not self.TEMPLATE:
+              self.TEMPLATE = self.__class__.__name__.lower()
+          template = env.get_template('widgets/%s.jinja'%self.TEMPLATE)
+          return template.render(kwargs)
 
 Wich is a nice and simple tool.
 
 All you have to do is subclass and add a instance to the template globals
 
 
-Example taken from one of my apps:
-<sourcecode syntax="python">
-class Select(Widget):
-    TEMPLATE = 'display_select'
+Example taken from one of my apps::
+
+  class Select(Widget):
+      TEMPLATE = 'display_select'
 
 
-    def __call__(self, env, context, name, 
-                       has_any=True, items=None, selected=None):
-        selected = context['request'].values.get(name) or selected
+      def __call__(self, env, context, name,
+                         has_any=True, items=None, selected=None):
+          selected = context['request'].values.get(name) or selected
 
-        if items is None:
-            items = context[name + 's'] # XXX: hack
-        
-        display_items = [ (item.slug, item.name) for item in items ]
-        
+          if items is None:
+              items = context[name + 's'] # XXX: hack
 
-        return Widget.__call__(self, env, context,
-                items=display_items,
-                name=name,
-                selected=selected,
-                has_any=has_any,
-                )
-</sourcecode>
+          display_items = [ (item.slug, item.name) for item in items ]
 
-and the fitting template fragment:
-<sourcecode syntax="html+jinja">
-<select name="{{name}}">
-{%- if has_any %}
-  <option value="any">Any {{ name|title }}
-{%- endif %}
-{%- for key, name in items %}
-  <option value="{{ key|e }}"
-          {%- if key==selected %} selected="selected"{% endif %}>
-          {{- name|e -}}
-  </option>
-{%- endfor %}
-</select>
-</sourcecode>
+
+          return Widget.__call__(self, env, context,
+                  items=display_items,
+                  name=name,
+                  selected=selected,
+                  has_any=has_any,
+                  )
+
+and the fitting template fragment::
+
+  <select name="{{name}}">
+  {%- if has_any %}
+    <option value="any">Any {{ name|title }}
+  {%- endif %}
+  {%- for key, name in items %}
+    <option value="{{ key|e }}"
+            {%- if key==selected %} selected="selected"{% endif %}>
+            {{- name|e -}}
+    </option>
+  {%- endfor %}
+  </select>

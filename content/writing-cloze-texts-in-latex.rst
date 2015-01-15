@@ -8,5 +8,7 @@ writing cloze texts in latex
     \newif\ifstudents \newcommand{\cloze}[1]{\ifstudents\underline{\hphantom{#1}}\else #1\fi}
 
 ::
+
 	a
     b
+

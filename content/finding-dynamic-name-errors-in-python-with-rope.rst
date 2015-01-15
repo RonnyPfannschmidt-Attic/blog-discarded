@@ -15,7 +15,7 @@ and access to non-existing attributes.
 my test files are
 
 :test.py:
-    ..code:: python
+    .. code:: python
 
         def test1():
             return a #error 1
@@ -33,7 +33,7 @@ my test files are
             c = 1
             return b, c
 :test2.py:
-    ..code:: python
+    .. code:: python
 
 
         from test import *
@@ -55,7 +55,8 @@ my test files are
 While pyflakes/pylint are only able to find the numbered errors a simple rope script is able to find all of them all.
 Its mostly based on a simple example ali gave to me.
 
-..code:: python
+.. code:: python
+
     #!/usr/bin/python
     import glob
     from rope.base.project import Project

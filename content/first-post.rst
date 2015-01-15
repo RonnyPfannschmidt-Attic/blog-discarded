@@ -8,6 +8,7 @@ First post
 After some problems i got the first blog instance running.
 
 It needed some python trickery::
+
     #!/usr/bin/python
     """
         TextPress FastCGI Runner

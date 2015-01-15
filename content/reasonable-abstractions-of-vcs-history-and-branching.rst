@@ -1,102 +1,88 @@
 reasonable abstractions of vcs history and branching
 ====================================================
 
-:date: 2009-01-12
+:date: 2009-01-12 00:00
 :tags: versioncontroll, anyvc
 
+I spend much time on figuring a good pattern,
+here is what i came up with so far.
+I will ignore the possibility of multiple projects per repo
+this is for anyvc_ .
 
-<p> I spend much time on figuring a good pattern, here is what i came up with so far.</p>
-<p> i will ignore the possibility of multiple projects per repo </p>
-<p> this is for <a href="http://www.bitbucket.org/RonnyPfannschmidt/anyvc/">anyvc</a></p>
+.. _anyvc: http://bitbucket.org/RonnyPfannschmidt/anyvc/
 
-<h3> Object types </h3>
-<dl>
-<dt> repository
-<dd> stores revisions and metadata
+Object types
+------------
 
-<dt> workingset 
-<dd> set of branches/heads from the repository thats located on a different physical location
-
-<dt> branch
-<dd> a line of development, may have multiple heads
-
-<dt> workdir 
-<dd> connected to a revision in a branch
-</dl>
-
-<h3> relations of those for common vcs's </h3>
-
-<h4> mercurial </h4>
-
-<h5> normal </h5>
-<pre>
- repo = workingset
- 1 workingset - n branches
- 1 revision in the dag - the workdir
-</pre>
-
-<h5> store nesting </h5>
-<small><b> warning: not yet implemented, don't try finding it </b></small>
-<pre>
- 1 repo - n workingsets
- 1 workingset - n branches
- 1 revision in the dag - the workdir
-</pre>   
+:repository: stores revisions and metadata
+:workingset: set of branches/heads from the repository
+             thats located on a different physical location
+:branch: a line of development, may have multiple heads
+:workdir: connected to a revision in a branch
 
 
-<h4> bazaar </h4>
-<small><b> this might change soon, they will add various improvements </b></small>
+relations of those for common vcs's
+++++++++++++++++++++++++++++++++++++++
 
-<h5> normal </h5>
-<pre>
- repo = workingset
- workingset = branch
- tip of the branch = workdir
-</pre>
+mercurial
 
-<h5> with repository </h5>
-<pre>
- 1 repo - n workingsets
- workingset = branch
- tip of the branch = workdir</pre>
-</pre>
+  normal::
+
+    repo = workingset
+    1 workingset - n branches
+    1 revision in the dag - the workdir
+
+  store nesting (not yet implemented)::
+
+    1 repo - n workingsets
+    1 workingset - n branches
+    1 revision in the dag - the workdir
 
 
-<h4> git </h4>
-<p>
-  i'm not entirely understanding the relations of references with git, <br>
-  branches are just named pointers that may move, <br>
-  tags are just named pointers that don't move, <br>
-  this might cause some changes to the abstraction later
-</p>
-<pre>
-  repo = workingset
-  1 workingset - n branches
-  wordir = pointing to a rev, 
-           might not belong to "normal" branches,
-           will be the HEAD branch, 
-           confusing till i dive in more
-</pre>
+bazaar
+  **this might change soon, they will add various improvements**
 
-<h4> subversion </h4>
-<p>
-  branching patterns are horrible here, <br> 
-  branches are not real branches, but copies of a tree. <br>
+  normal::
+
+    repo = workingset
+    workingset = branch
+    tip of the branch = workdir
+
+  with repository::
+
+    1 repo - n workingsets
+    workingset = branch
+    tip of the branch = workdir</pre>
+
+
+git
+  i'm not entirely understanding the relations of references with git,
+  branches are just named pointers that may move,
+  tags are just named pointers that don't move,
+  this might cause some changes to the abstraction later::
+
+    repo = workingset
+    1 workingset - n branches
+    wordir = pointing to a rev,
+             might not belong to "normal" branches,
+             will be the HEAD branch,
+             confusing till i dive in more
+
+subversion
+  branching patterns are horrible here,
+  branches are not real branches, but copies of a tree.
   There might be need for a mapping tool that allows to configure non-default patterns.
-</p>
-<p>
-  Branch management is rather tricky as even the default ways for branching have messy schemes, common ones are :
-  <ul>
-  <li> /trunk + /branch/*
-  <li> /{project}/tunk + /{project}/branches/*
-  <li> /trunk/{project} + /branches/{project}/*
-  </ul>
-  note that a * might be more than one level deep (ie nested structures for branches)
-</p>
-<pre>
-  repo = workingset
-  1 workingset - n branches
-  workdir = pointing to subdir + rev of the repo
-</pre>
 
-   
+  Branch management is rather tricky as even the default ways for branching have messy schemes, common ones are :
+
+  * /trunk, /branch/${branch}
+  * /{project}/tunk + /{project}/branches/${branch}
+  * /trunk/{project} + /branches/{project}/${branch}
+
+  note that a branches might be more than one level deep::
+
+    repo = workingset
+    1 workingset - n branches
+    workdir = pointing to subdir + rev of the repo
+
+
