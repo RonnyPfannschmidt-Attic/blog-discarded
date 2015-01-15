@@ -4,6 +4,7 @@ introducing simpleconfig
 
 :date: 2008-04-22 00:00
 :tags: python, pida, cruft
+:category: old
 
 
 After some analysis of the current usage of ConfigObj

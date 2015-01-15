@@ -3,6 +3,7 @@ what happens when porting c to vala
 
 :date: 2008-08-18
 :tags: pida, gtk, vala
+:category: old
 
 
 Since the paned widget of pida_ (for the sidebars) is written in c and i have to maintain it,

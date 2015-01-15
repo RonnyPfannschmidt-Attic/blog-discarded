@@ -3,6 +3,7 @@ the web and the empty-controller antipattern
 
 :date: 2008-01-09
 :tags: python, web, ruby, antipattern
+:category: old
 
 
 There is an annoying trend in web-frameworks for dynamic languages.

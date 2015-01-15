@@ -3,6 +3,7 @@ playing with prolog syntax abstraction
 
 :date: 2009-01-07
 :tags: prolog
+:category: old
 
 
 i just feel in love :)

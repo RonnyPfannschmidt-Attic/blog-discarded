@@ -2,6 +2,7 @@ this blog sucks - i just cant write essay's
 ===========================================
 
 :date: 2008-03-25
+:category: old
 
 
 I just can't yet write in essay style.

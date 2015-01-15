@@ -3,6 +3,7 @@ reasonable abstractions of vcs history and branching
 
 :date: 2009-01-12 00:00
 :tags: versioncontroll, anyvc
+:category: old
 
 I spend much time on figuring a good pattern,
 here is what i came up with so far.

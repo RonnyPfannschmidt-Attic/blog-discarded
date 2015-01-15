@@ -2,6 +2,7 @@ finding dynamic name-errors in python with rope
 ===============================================
 
 :date: 2008-08-01
+:category: old
 :tags: python
 
 

@@ -3,6 +3,7 @@ A GTK MTA for simple testing of mail sending apps
 
 :date: 2007-11-18 20:21
 :tags: python, web, mail, twisted, kiwi
+:category: old
 
 
 Usualy testing mailers of web applications involves

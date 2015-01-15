@@ -3,6 +3,7 @@ sqlalchemy based select fields for wtforms
 
 :date: 2008-03-10
 :tags: python, web
+:category: old
 
 
 I did a few forms wasted much time doing all the choice stuff by myself, so i put together a simple class which manages it for me::

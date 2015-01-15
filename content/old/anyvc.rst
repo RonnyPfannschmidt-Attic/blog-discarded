@@ -2,6 +2,7 @@ Anyvc
 =====
 
 :date: 2009-01-05
+:category: old
 
 
 Anyvc is a small lib to abstract vcs's

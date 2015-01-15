@@ -4,6 +4,7 @@ pida's new plugin system - draft
 
 :date: 2008-08-08
 :tags: python, pida, old, draft
+:category: old
 
 
 this is a draft, feel free to report anything that looks plain wrong.

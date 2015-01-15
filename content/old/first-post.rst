@@ -2,6 +2,7 @@ First post
 ==========
 
 :date: 2007-09-19
+:category: old
 :tags: python, fastcgi, life
 
 

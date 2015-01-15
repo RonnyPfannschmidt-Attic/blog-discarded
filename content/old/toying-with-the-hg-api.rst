@@ -3,6 +3,7 @@ toying with the hg api
 
 :date: 2009-08-24
 :tags: python, versioncontroll, hg
+:category: old
 
 
 Well, recently i started to write some scripts to help with release-cycles in pida

@@ -5,6 +5,7 @@ wrapping pro/toolkit strings
 
 :date: 2008-03-03 00:00
 :tags: pro_toolkit, c++, old
+:category: old
 
 
 As part of my internship i have to work with Pro/Toolkit.

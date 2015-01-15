@@ -3,6 +3,7 @@ simple cached for properties done right
 
 :date: 2008-08-12
 :tags: python
+:category: old
 
 
 Since people all over the place seem to get caching properties in python wrong, thus polluting the instance with weird attributes,

@@ -3,6 +3,7 @@ why i hate xmlrpc
 
 :date: 2008-02-28
 :tags: python, web, xml
+:category: old
 
 
 lets assume the data is::

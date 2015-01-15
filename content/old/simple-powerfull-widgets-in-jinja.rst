@@ -3,6 +3,7 @@ simple powerfull widgets in jinja
 
 :date: 2007-09-22
 :tags: python, jinja, templates
+:category: old
 
 
 These days i hit a case, where jinja macros didn't fit any more,

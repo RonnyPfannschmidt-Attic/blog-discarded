@@ -3,6 +3,7 @@ diggin up clonedigger
 
 :date: 2008-06-11
 :tags: python, clonedigger
+:category: old
 
 
 Recently i discovered clonedigger. It looks like a nice toy, but some serious issues pissed me off.

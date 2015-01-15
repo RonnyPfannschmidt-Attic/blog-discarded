@@ -3,6 +3,7 @@ nosetest in pida
 
 :date: 2008-01-12
 :tags: python, kiwi, pida
+:category: old
 
 
 <p>

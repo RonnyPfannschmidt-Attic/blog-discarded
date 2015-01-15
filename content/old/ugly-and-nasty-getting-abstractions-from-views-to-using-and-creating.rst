@@ -2,6 +2,7 @@ ugly and nasty - getting abstractions from views to using and creating
 ======================================================================
 
 :date: 2009-01-27
+:category: old
 
 
 <p>

@@ -4,6 +4,7 @@ how to mimic sql dql in prolog
 
 :date: 2009-01-07
 :tags: old
+:category: old
 
 
 i just made up a prolog dsl for entering pseudo-sql queries.
