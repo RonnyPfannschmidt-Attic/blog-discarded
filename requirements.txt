@@ -1,4 +1,0 @@
-pip
-livereload
-pelican
-formic

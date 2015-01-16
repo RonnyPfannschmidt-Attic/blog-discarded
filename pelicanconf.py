@@ -23,7 +23,7 @@ ARTICLE_URL = 'posts/{date:%Y}/{slug}.html'
 
 # Blogroll
 LINKS = (
-    ('Pelican', 'http://getpelican.com/'),
+    #('Pelican', 'http://getpelican.com/'),
 )
 # Social widget
 SOCIAL = (
