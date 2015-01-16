@@ -1,6 +1,5 @@
 \.env
 output/
 cache/
+plugins/
 .*\.db
-disqus_static.py
-plantuml_rst.py

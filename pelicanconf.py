@@ -5,8 +5,11 @@ from __future__ import unicode_literals
 AUTHOR = u'Ronny Pfannschmidt'
 SITENAME = u'Blargh'
 SITEURL = ''
+PLUGIN_PATHS = ['./plugins']
 PLUGINS = [
     'extended_sitemap',
+    'plantuml_rst',
+    'googleplus_comments',
 ]
 PATH = 'content'
 

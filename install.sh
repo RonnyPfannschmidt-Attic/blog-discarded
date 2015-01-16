@@ -1,8 +1,19 @@
+#!/bin/sh
 PLUGIN_REPO=https://raw.githubusercontent.com/getpelican/pelican-plugins/master
 
-pip install -U \
-    pelican \
-    pelican-extended-sitemap \
+download() {
+    mkdir -p plugins
+    if test -f plugins/$(basename $1)
+    then
+        echo got $1
+    else
+        wget $PLUGIN_REPO/$1 -O plugins/$(basename $1)
+    fi
+}
 
-wget $PLUGIN_REPO/disqus_static/disqus_static.py
-wget $PLUGIN_REPO/plantuml/plantuml_rst.py
+pip install -q -U \
+    pelican \
+    pelican-extended-sitemap
+
+download plantuml/plantuml_rst.py
+download googleplus_comments/googleplus_comments.py
