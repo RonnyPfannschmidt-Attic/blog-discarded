@@ -5,12 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = u'Ronny Pfannschmidt'
 SITENAME = u'Blargh'
 SITEURL = ''
-PLUGIN_PATHS = ['./plugins']
-PLUGINS = [
-    'extended_sitemap',
-    'plantuml_rst',
-    'googleplus_comments',
-]
+
 PATH = 'content'
 THEME = 'chunk'
 TIMEZONE = 'Europe/Berlin'
@@ -33,6 +28,7 @@ LINKS = (
 # Social widget
 SOCIAL = (
     ('Twitter', 'https://twitter.com/ossronny'),
+    ('Google+', 'https://plus.google.com/+RonnyPfannschmidt/posts'),
 )
 
 DEFAULT_PAGINATION = False
