@@ -12,7 +12,7 @@ PLUGINS = [
     'googleplus_comments',
 ]
 PATH = 'content'
-
+THEME = 'chunk'
 TIMEZONE = 'Europe/Berlin'
 
 DEFAULT_LANG = u'en'
@@ -23,6 +23,8 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
+ARTICLE_SAVE_AS = 'posts/{date:%y}/{slug}.html'
+ARTICLE_URL = 'posts/{date:%y}/{slug}.html'
 
 # Blogroll
 LINKS = (
