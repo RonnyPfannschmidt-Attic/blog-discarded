@@ -18,8 +18,8 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
-ARTICLE_SAVE_AS = 'posts/{date:%y}/{slug}.html'
-ARTICLE_URL = 'posts/{date:%y}/{slug}.html'
+ARTICLE_SAVE_AS = 'posts/{date:%Y}/{slug}.html'
+ARTICLE_URL = 'posts/{date:%Y}/{slug}.html'
 
 # Blogroll
 LINKS = (
