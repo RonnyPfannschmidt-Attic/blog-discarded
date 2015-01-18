@@ -3,12 +3,14 @@ First post
 
 :date: 2007-09-19
 :category: old
-:tags: python, fastcgi, life
+:tags: python, fastcgi, life, historic, abandoned
 
 
 After some problems i got the first blog instance running.
 
-It needed some python trickery::
+It needed some python trickery.
+
+.. code:: python
 
     #!/usr/bin/python
     """

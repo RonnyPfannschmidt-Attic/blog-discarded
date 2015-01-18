@@ -2,11 +2,12 @@ diggin up clonedigger
 =====================
 
 :date: 2008-06-11
-:tags: python, clonedigger
+:tags: python, clone-digger, abandoned
 :category: old
+:slug: digging-clonedigger
 
-
-Recently i discovered clonedigger. It looks like a nice toy, but some serious issues pissed me off.
+Recently i discovered clone-digger.
+It looks like a nice toy, but some serious issues pissed me off.
 
 It wont detect clones on:
 * Reordered instruction sequences
@@ -14,7 +15,7 @@ It wont detect clones on:
 
 so the following 3 functions simply won't get detected as the same thing
 
-..code:: python
+.. code:: python
 
     def means_1(l):
         ll = len(l)

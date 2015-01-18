@@ -4,16 +4,19 @@ finding dynamic name-errors in python with rope
 :date: 2008-08-01
 :category: old
 :tags: python
-
+:slig: find-python-name-errors-with-rope
 
 Im really unhappy with pylint/pyflakes cause their analysis is entirely static.
 
-But thanks to <a href="http://rope.sourceforge.net/">rope_</a> by Ali Gholami Rudi thats no longer a Problem.
+But thanks to Rope_ by Ali Gholami Rudi thats no longer a Problem.
 
-A simple test to show the power of rope for finding missing names in the context of star-import
+.. _rope: http://rope.sourceforge.net/
+
+A simple test to show the power of rope
+for finding missing names in the context of star-import
 and access to non-existing attributes.
 
-my test files are
+My test files are:
 
 :test.py:
     .. code:: python
@@ -53,7 +56,8 @@ my test files are
         t.x
         t.abc #error b
 
-While pyflakes/pylint are only able to find the numbered errors a simple rope script is able to find all of them all.
+While pyflakes/pylint are only able to find the numbered errors
+a simple rope script is able to find all of them all.
 Its mostly based on a simple example ali gave to me.
 
 .. code:: python

@@ -3,13 +3,16 @@ how to mimic sql dql in prolog
 ==============================
 
 :date: 2009-01-07
-:tags: old
+:modified: 2015-01-17
+:tags: old, prolog
 :category: old
+:slug: sql-dql-mimic-in-prolog
 
 
-i just made up a prolog dsl for entering pseudo-sql queries.
+I just made up a prolog dsl for entering pseudo-sql queries.
+The basic needs to get that done are this op defs.
 
-the basic needs to get that done are this op defs::
+.. code:: prolog
 
     :- op(1080, fx, select).
     :- op(1070, yfy, where).
@@ -32,11 +35,13 @@ so how do those work?
 :like, and, or:   just normal operators to make expressions more nice
 
 
-an example expression::
+an example expression
+
+.. code:: prolog
 
     select
         users(id, name),
-        permission(name)
+        collect.list(permission(name))
     from
         users
         join user_permissions
