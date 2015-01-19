@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = u'Ronny Pfannschmidt'
 SITENAME = u'Blargh'
 SITEURL = ''
-
+SINGLE_AUTHOR = True
 PATH = 'content'
 THEME = 'chunk'
 TIMEZONE = 'Europe/Berlin'
