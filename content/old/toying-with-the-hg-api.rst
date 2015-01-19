@@ -2,12 +2,15 @@ toying with the hg api
 ======================
 
 :date: 2009-08-24
-:tags: python, versioncontroll, hg
+:tags: python, version control, hg
 :category: old
 
 
 I recently started to write some scripts to help with release-cycles in pida
-here is an early version of the tool we'll use as base for version-bumping plugins within the main repo::
+here is an early version of the tool we'll use as base
+for version-bumping plugins within the main repo:
+
+.. code:: python
 
   #!/usr/bin/python
 
@@ -42,7 +45,7 @@ here is an early version of the tool we'll use as base for version-bumping plugi
                 last_bump, last_plugin_change, \
                 'bump' if needs_bump else 'ignore'
 
-For now all the bugger does is get me reasonable accurate version numbers,
+For now all it does is get me reasonable accurate version numbers,
 for plugin changes versus plugin metadata changes.
 
 The next exercise is to have the script edit the metadata files in the workdir.

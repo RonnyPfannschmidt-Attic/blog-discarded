@@ -18,7 +18,7 @@ Experimentation
 Gone
 =====
 :pida: a python based IDE
-:vellum: a build system
+:vellum: a build system orginated by zed shaw
 
 
 .. _anyvc: http://bitbucket.org/RonnyPfannschmidt/anyvc
