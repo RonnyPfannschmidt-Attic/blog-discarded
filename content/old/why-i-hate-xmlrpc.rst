@@ -2,16 +2,20 @@ why i hate xmlrpc
 =================
 
 :date: 2008-02-28
-:tags: python, web, xml
+:tags: python, web, xml, rant
 :category: old
 
 
-lets assume the data is::
+lets assume the data is.
+
+.. code:: pycon
 
   >>> fun = [{"age": 20, "name": "hans", "titles": ["Dr", "Dipl"]},
   ...        {"age": 19, "name": "peter"}]
 
-nd you want to do::
+And you want to do:
+
+..code:: pycon
 
   >>> myrpc.people.add(fun)
 
@@ -24,7 +28,9 @@ the json data looks like this::
       {"age": 19, "name": "peter"}]
     ]}
 
-and the xmlrpc data looks like this::
+and the xmlrpc data looks like this:
+
+.. code:: xml
 
   <methodcall>
   <methodName>people.add</methodName>
@@ -63,9 +69,10 @@ and the xmlrpc data looks like this::
   </params>
   </sourcecode>
 
-why doesn't xmlrpc look like this::
+why doesn't xmlrpc look like this
 
-  <sourcecode syntax="xml">
+.. code:: xml
+
   <methodCall xmlns=... name="people.add">
    <array>
     <struct>
@@ -82,5 +89,4 @@ why doesn't xmlrpc look like this::
     </struct>
    </array>
   </methodCall>
-  </sourcecode>
 

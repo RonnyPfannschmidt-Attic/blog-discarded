@@ -6,12 +6,14 @@ what happens when porting c to vala
 :category: old
 
 
-Since the paned widget of pida_ (for the sidebars) is written in c and i have to maintain it,
-i started porting it 1:1 to vala_
+Since the paned widget of pida_ (for the sidebars) is written in c
+and i have to maintain it, i started porting it 1:1 to vala_
 
 The results are stunning in terms of LOC and code readability.
 
-Take this c simple c helper function::
+Take this c simple c helper function:
+
+.. code:: c
 
     void
     _moo_window_set_icon_from_stock (GtkWindow  *window,
@@ -41,7 +43,9 @@ Take this c simple c helper function::
     }
 
 
-and it looks like this in vala::
+and it looks like this in vala:
+
+.. code:: vala
 
     void set_icon_from_stock(Window window, string stock_id)
     {
@@ -58,10 +62,12 @@ and it looks like this in vala::
     }
 
 
-But thats only getting started, the ease of signals, properties, data-hiding and is really stunning compared to c.
+But thats only getting started, the ease of signals,
+properties and data-hiding is really stunning compared to c.
 
-Vala has all i need for nice enough GUI programming, yet its entirely ABI/API-compatible to gtk+ in c.
-Thanks to the vala team, keep up the great work.
+Vala has all i need for nice enough GUI programming,
+yet its entirely ABI/API-compatible to gtk+ in c.
+Thanks to the Vala team, keep up the great work.
 
 .. _pida: http://pida.co.uk
 .. _vala: https://wiki.gnome.org/Projects/Vala

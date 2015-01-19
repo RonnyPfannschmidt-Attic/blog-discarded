@@ -6,7 +6,7 @@ playing with prolog syntax abstraction
 :category: old
 
 
-i just feel in love :)
+I just feel in love :)
 
 .. code:: prolog
 
@@ -53,5 +53,6 @@ i just feel in love :)
 
 It's valid prolog code, but mostly a toy.
 
-Next thing i'll try to do is a small forward/backward inference machine thats supposed to be able to deal with simple c and vala deps
+Next thing i'll try to do is a small forward/backward inference machine
+able to deal with simple c and vala deps.
 

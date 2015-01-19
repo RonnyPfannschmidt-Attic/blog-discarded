@@ -6,7 +6,10 @@ sqlalchemy based select fields for wtforms
 :category: old
 
 
-I did a few forms wasted much time doing all the choice stuff by myself, so i put together a simple class which manages it for me::
+I did a few forms wasted much time doing all the choice stuff by myself,
+so i put together a simple class which manages it for me:
+
+.. code:: python
 
     from wtforms import SelectField
 

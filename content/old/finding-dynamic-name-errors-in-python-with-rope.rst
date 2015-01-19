@@ -6,7 +6,7 @@ finding dynamic name-errors in python with rope
 :tags: python
 :slig: find-python-name-errors-with-rope
 
-Im really unhappy with pylint/pyflakes cause their analysis is entirely static.
+Im really unhappy with pylint/pyflakes because their analysis is entirely static.
 
 But thanks to Rope_ by Ali Gholami Rudi thats no longer a Problem.
 

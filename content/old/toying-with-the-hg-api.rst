@@ -6,7 +6,7 @@ toying with the hg api
 :category: old
 
 
-Well, recently i started to write some scripts to help with release-cycles in pida
+I recently started to write some scripts to help with release-cycles in pida
 here is an early version of the tool we'll use as base for version-bumping plugins within the main repo::
 
   #!/usr/bin/python

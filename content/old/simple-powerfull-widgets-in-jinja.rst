@@ -11,7 +11,9 @@ since they don't support keyword parameters.
 
 So i created a small widget system wich supports those.
 
-The basic primitive is::
+The basic primitive is
+
+.. code:: python
 
   class Widget(object):
       jinja_context_callable = True
@@ -29,7 +31,9 @@ Wich is a nice and simple tool.
 All you have to do is subclass and add a instance to the template globals
 
 
-Example taken from one of my apps::
+Example taken from one of my apps
+
+.. code:: python
 
   class Select(Widget):
       TEMPLATE = 'display_select'
@@ -52,7 +56,9 @@ Example taken from one of my apps::
                   has_any=has_any,
                   )
 
-and the fitting template fragment::
+and the fitting template fragment:
+
+.. code:: html+jinja
 
   <select name="{{name}}">
   {%- if has_any %}

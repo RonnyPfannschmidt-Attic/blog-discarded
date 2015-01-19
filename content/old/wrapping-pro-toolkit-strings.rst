@@ -11,7 +11,9 @@ wrapping pro/toolkit strings
 As part of my internship i have to work with Pro/Toolkit.
 Their api isn't exactly nice, so i decided to write a set C++ wrappers.
 
-The first part is an abstraction of their various wide string definitions::
+The first part is an abstraction of their various wide string definitions.
+
+.. code:: cpp
 
 	template <class Holder, size_t Len>
 	class WString {
@@ -56,5 +58,6 @@ The first part is an abstraction of their various wide string definitions::
 Whats the use ?
 ================
 
-This class keeps away all all common explicit string/wstring conversations and is usable with the orginal api.
+This class keeps away all all common explicit string/wstring conversations
+and is usable with the orginal api.
 It supports RAII, but it doesnt support Exceptions.
