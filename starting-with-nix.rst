@@ -1,4 +1,3 @@
-=================
 Starting with Nix
 =================
 
@@ -12,3 +11,6 @@ to declare packages.
 
 However in my oppinion the documentation is unclear about going
 from examples to nice and well defined
+
+.. _NixOs: https://nixos.org/
+.. _Nix: https://nixos.org/nix
