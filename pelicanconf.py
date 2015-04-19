@@ -2,15 +2,15 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = u'Ronny Pfannschmidt'
-SITENAME = u'all the things'
+AUTHOR = 'Ronny Pfannschmidt'
+SITENAME = 'all the things'
 SITEURL = ''
 SINGLE_AUTHOR = True
 PATH = 'content'
 THEME = 'chunk'
 TIMEZONE = 'Europe/Berlin'
 
-DEFAULT_LANG = u'en'
+DEFAULT_LANG = 'en'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None

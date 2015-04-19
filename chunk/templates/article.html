@@ -4,19 +4,4 @@
 
 {% include 'post.html' %}
 
-<div id="commentswrap">
-	<div id="comments"></div>
-</div>
-<script src="https://apis.google.com/js/plusone.js"></script>
-<script>
-gapi.comments.render('comments', {
-    href: window.location,
-    width: '600',
-    first_party_property: 'BLOGGER',
-    view_type: 'FILTERED_POSTMOD'
-});
-
-</script>
-
-
 {% endblock %}
